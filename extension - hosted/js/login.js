@@ -2,7 +2,7 @@
 const userElement = document.getElementById('email');
 const passwordElement = document.getElementById('password');
 const trigger = document.getElementById('trigger');
-const API = "https://swishvinmik.azurewebsites.net/api";
+const API = "https://test-9t34.onrender.com/api";
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));

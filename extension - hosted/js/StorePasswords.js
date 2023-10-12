@@ -1,7 +1,7 @@
 let token = localStorage.getItem('user')
 token = JSON.parse(token)
 
-const API = "https://swishvinmik.azurewebsites.net/api";
+const API = "https://test-9t34.onrender.com/api";
 
 const allURLs = [
   "https://www.facebook.com",

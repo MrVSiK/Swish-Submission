@@ -1,6 +1,6 @@
 let trigger = document.getElementById('submitpin');
 let token = localStorage.getItem('user')
-const API = "https://swishvinmik.azurewebsites.net/api";
+const API = "https://test-9t34.onrender.com/api";
 token = JSON.parse(token)
 
 function autofill() {

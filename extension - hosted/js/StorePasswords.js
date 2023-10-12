@@ -64,17 +64,9 @@ window.addEventListener('DOMContentLoaded', () => {
     var text = document.getElementById('passwordToStore')
     var username = document.getElementById('userName')
     try {
-      chrome.tabs.query(
-        { active: true, windowId: chrome.windows.WINDOW_ID_CURRENT },
-        function (tabs) {
-          url = tabs[0].url
-          sendData(url, username.value, text.value)
-        },
-      )
+      sendData(window.location.href, inputUsername, Password)
     } catch (e) {
-      if (e == QUOTA_EXCEEDED_ERR) {
-        alert('Quota exceeded!') //data wasn’t successfully saved due to quota exceed so throw an error
-      }
+      alert('Quota exceeded!')
     }
     // store(username.value, text.value)
   })

